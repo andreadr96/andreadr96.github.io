@@ -23,13 +23,20 @@
         <span class="logo-text">Andrea Doña</span>
     </div>
 
+    <!-- Language Switcher -->
+    <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="es">ES</button>
+        <span class="lang-divider">|</span>
+        <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+
     <!-- Navigation (Hidden on Home) -->
     <nav id="main-nav" class="hidden">
         <ul>
-            <li><a href="#" data-target="home-section" class="nav-link active">Inicio</a></li>
-            <li><a href="#" data-target="level-design-section" class="nav-link">Level Design</a></li>
-            <li><a href="#" data-target="project-management-section" class="nav-link">Project Management</a></li>
-            <li><a href="#" data-target="about-section" class="nav-link">Sobre Mí</a></li>
+            <li><a href="#" data-target="home-section" class="nav-link active" data-i18n="nav_home">Inicio</a></li>
+            <li><a href="#" data-target="level-design-section" class="nav-link" data-i18n="nav_level">Level Design</a></li>
+            <li><a href="#" data-target="project-management-section" class="nav-link" data-i18n="nav_pm">Project Management</a></li>
+            <li><a href="#" data-target="about-section" class="nav-link" data-i18n="nav_about">Sobre Mí</a></li>
         </ul>
     </nav>
 
@@ -38,29 +45,29 @@
         <section id="home-section" class="page-section active">
             <div class="hero">
                 <div class="hero-content">
-                    <h1>Hola, soy <span class="highlight">Andrea Doña</span></h1>
-                    <p class="subtitle">Competitor Analyst | Game Producer | Psychology</p>
-                    <p class="intro-text">
+                    <h1 data-i18n="home_title">Hola, soy <span class="highlight">Andrea Doña</span></h1>
+                    <p class="subtitle" data-i18n="home_subtitle">Competitor Analyst | Game Producer | Psychology</p>
+                    <p class="intro-text" data-i18n="home_intro">
                         Bienvenido a mi espacio. Mi perfil se bifurca entre la creatividad de la creación de mundos y la organización estratégica para hacerlos realidad, todo apoyado por una profunda comprensión de la psicología humana.
                     </p>
                     <div class="path-selector">
-                        <h2>¿Qué perfil deseas explorar?</h2>
+                        <h2 data-i18n="home_select">¿Qué perfil deseas explorar?</h2>
                         <div class="cards-container">
                             <div class="path-card" data-target="level-design-section">
                                 <div class="card-icon">
                                     <i class="fa-solid fa-cube"></i>
                                 </div>
-                                <h3>Level Design & Arte</h3>
-                                <p>Creación de mundos, modelado 3D y diseño de entornos inmersivos.</p>
-                                <span class="btn-explore">Explorar <i class="fa-solid fa-arrow-right"></i></span>
+                                <h3 data-i18n="card_level_title">Level Design & Arte</h3>
+                                <p data-i18n="card_level_desc">Creación de mundos, modelado 3D y diseño de entornos inmersivos.</p>
+                                <span class="btn-explore" data-i18n="btn_explore">Explorar <i class="fa-solid fa-arrow-right"></i></span>
                             </div>
                             <div class="path-card" data-target="project-management-section">
                                 <div class="card-icon">
                                     <i class="fa-solid fa-users-gear"></i>
                                 </div>
-                                <h3>Project Management</h3>
-                                <p>Gestión de equipos, metodologías Agile y producción de videojuegos.</p>
-                                <span class="btn-explore">Explorar <i class="fa-solid fa-arrow-right"></i></span>
+                                <h3 data-i18n="card_pm_title">Project Management</h3>
+                                <p data-i18n="card_pm_desc">Gestión de equipos, metodologías Agile y producción de videojuegos.</p>
+                                <span class="btn-explore" data-i18n="btn_explore">Explorar <i class="fa-solid fa-arrow-right"></i></span>
                             </div>
                         </div>
                     </div>
@@ -72,13 +79,13 @@
         <section id="level-design-section" class="page-section hidden">
             <div class="section-container">
                 <div class="section-header">
-                    <h2>Level Design & <span class="highlight">Arte</span></h2>
-                    <p>Dando vida a los mundos imaginarios.</p>
+                    <h2 data-i18n="level_section_title">Level Design & <span class="highlight">Arte</span></h2>
+                    <p data-i18n="level_section_subtitle">Dando vida a los mundos imaginarios.</p>
                 </div>
                 
                 <div class="skills-grid">
                     <div class="skill-category glass-panel">
-                        <h3><i class="fa-solid fa-pen-nib"></i> Software de Arte y Producción</h3>
+                        <h3 data-i18n="level_art_title"><i class="fa-solid fa-pen-nib"></i> Software de Arte y Producción</h3>
                         <div class="tags">
                             <span class="tag">Adobe Photoshop</span>
                             <span class="tag">Adobe Illustrator</span>
@@ -87,36 +94,35 @@
                             <span class="tag">Maya</span>
                             <span class="tag">Zbrush</span>
                         </div>
-                        <p class="mt-4">Actualmente cursando el 4º año del Grado en diseño y programación de videojuegos en la UPC, desarrollando mis habilidades en la creación de assets y diseño de niveles.</p>
+                        <p class="mt-4" data-i18n="level_art_desc">Actualmente cursando el 4º año del Grado en diseño y programación de videojuegos en la UPC, desarrollando mis habilidades en la creación de assets y diseño de niveles.</p>
                     </div>
                     
                     <div class="skill-category glass-panel">
-                        <h3><i class="fa-solid fa-gamepad"></i> Análisis de Competidores</h3>
-                        <p><strong>SuperBanana Studios</strong> (Jul 2025 - Actual)</p>
+                        <h3 data-i18n="level_comp_title"><i class="fa-solid fa-gamepad"></i> Análisis de Competidores</h3>
+                        <p data-i18n="level_comp_sb"><strong>SuperBanana Studios</strong> (Jul 2025 - Actual)</p>
                         <ul class="styled-list">
-                            <li>Estudios detallados sobre la jugabilidad, progresión y mecánicas.</li>
-                            <li>Análisis de economía interna, retención y monetización.</li>
-                            <li>Examen de LiveEvents y sistemas de progresión (LiveOps).</li>
+                            <li data-i18n="level_comp_1">Estudios detallados sobre la jugabilidad, progresión y mecánicas.</li>
+                            <li data-i18n="level_comp_2">Análisis de economía interna, retención y monetización.</li>
+                            <li data-i18n="level_comp_3">Examen de LiveEvents y sistemas de progresión (LiveOps).</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="portfolio-gallery">
-                    <h3>Proyectos Destacados</h3>
+                    <h3 data-i18n="level_projects_title">Proyectos Destacados</h3>
                     <div class="gallery-grid">
-                        <!-- Placeholder for projects -->
                         <div class="gallery-item">
                             <img src="https://images.unsplash.com/photo-1614294149010-950b698f72c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Proyecto Level Design 1">
                             <div class="item-overlay">
-                                <h4>Entorno Sci-Fi</h4>
-                                <p>Modelado y texturizado</p>
+                                <h4 data-i18n="level_proj_1_title">Entorno Sci-Fi</h4>
+                                <p data-i18n="level_proj_1_desc">Modelado y texturizado</p>
                             </div>
                         </div>
                         <div class="gallery-item">
                             <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Proyecto Level Design 2">
                             <div class="item-overlay">
-                                <h4>Assets Fantasy</h4>
-                                <p>Zbrush & Substance</p>
+                                <h4 data-i18n="level_proj_2_title">Assets Fantasy</h4>
+                                <p data-i18n="level_proj_2_desc">Zbrush & Substance</p>
                             </div>
                         </div>
                     </div>
@@ -128,42 +134,42 @@
         <section id="project-management-section" class="page-section hidden">
             <div class="section-container">
                 <div class="section-header">
-                    <h2>Project <span class="highlight">Management</span></h2>
-                    <p>Liderazgo, Agile y producción de videojuegos.</p>
+                    <h2 data-i18n="pm_section_title">Project <span class="highlight">Management</span></h2>
+                    <p data-i18n="pm_section_subtitle">Liderazgo, Agile y producción de videojuegos.</p>
                 </div>
 
                 <div class="timeline">
                     <div class="timeline-item glass-panel">
-                        <div class="timeline-date">Actual - Jun '26</div>
+                        <div class="timeline-date" data-i18n="pm_tesis_date">Actual - Jun '26</div>
                         <div class="timeline-content">
-                            <h3>Game Producer (Tesis Universitaria)</h3>
-                            <p><strong>RPG por turnos (Basado en la Odisea)</strong></p>
-                            <p>Productora de un equipo de 8 personas (5 colaboradores). Gestión completa del ciclo de desarrollo para la tesis universitaria.</p>
+                            <h3 data-i18n="pm_tesis_title">Game Producer (Tesis Universitaria)</h3>
+                            <p data-i18n="pm_tesis_subtitle"><strong>RPG por turnos (Basado en la Odisea)</strong></p>
+                            <p data-i18n="pm_tesis_desc">Productora de un equipo de 8 personas (5 colaboradores). Gestión completa del ciclo de desarrollo para la tesis universitaria.</p>
                         </div>
                     </div>
 
                     <div class="timeline-item glass-panel">
-                        <div class="timeline-date">Ene '25 - Jun '25</div>
+                        <div class="timeline-date" data-i18n="pm_wh_date">Ene '25 - Jun '25</div>
                         <div class="timeline-content">
-                            <h3>Game Producer</h3>
-                            <p><strong>Motor propio (Basado en Warhammer 40k)</strong></p>
-                            <p>Productora para una clase de 23 alumnos. Implementación de Metodología Agile y Scrum Teams en un motor desarrollado internamente.</p>
+                            <h3 data-i18n="pm_wh_title">Game Producer</h3>
+                            <p data-i18n="pm_wh_subtitle"><strong>Motor propio (Basado en Warhammer 40k)</strong></p>
+                            <p data-i18n="pm_wh_desc">Productora para una clase de 23 alumnos. Implementación de Metodología Agile y Scrum Teams en un motor desarrollado internamente.</p>
                         </div>
                     </div>
                     
                     <div class="timeline-item glass-panel">
-                        <div class="timeline-date">Oct '25</div>
+                        <div class="timeline-date" data-i18n="pm_mentor_date">Oct '25</div>
                         <div class="timeline-content">
-                            <h3>Clases de Mentoría y Coaching</h3>
-                            <p><strong>HappyPathLab</strong></p>
-                            <p>Colaboración para aplicar aprendizaje de mentoría/coaching a personas del sector de videojuegos.</p>
+                            <h3 data-i18n="pm_mentor_title">Clases de Mentoría y Coaching</h3>
+                            <p data-i18n="pm_mentor_subtitle"><strong>HappyPathLab</strong></p>
+                            <p data-i18n="pm_mentor_desc">Colaboración para aplicar aprendizaje de mentoría/coaching a personas del sector de videojuegos.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="management-skills mt-5">
                     <div class="glass-panel">
-                        <h3><i class="fa-solid fa-toolbox"></i> Herramientas de Gestión</h3>
+                        <h3 data-i18n="pm_tools_title"><i class="fa-solid fa-toolbox"></i> Herramientas de Gestión</h3>
                         <div class="tags">
                             <span class="tag">Metodología Agile</span>
                             <span class="tag">Scrum</span>
@@ -188,38 +194,38 @@
                         </div>
                     </div>
                     <div class="about-content">
-                        <h2>Sobre <span class="highlight">Mí</span></h2>
-                        <p class="lead">Psicología aplicada al diseño y desarrollo.</p>
-                        <p>Además de mi pasión por los videojuegos, mi formación en Psicología aporta una capa extra a todo lo que hago. Entender al jugador (como Level Designer) y entender al equipo (como Game Producer) son dos caras de la misma moneda.</p>
+                        <h2 data-i18n="about_section_title">Sobre <span class="highlight">Mí</span></h2>
+                        <p class="lead" data-i18n="about_lead">Psicología aplicada al diseño y desarrollo.</p>
+                        <p data-i18n="about_desc">Además de mi pasión por los videojuegos, mi formación en Psicología aporta una capa extra a todo lo que hago. Entender al jugador (como Level Designer) y entender al equipo (como Game Producer) son dos caras de la misma moneda.</p>
                         
                         <div class="education-list mt-4">
-                            <h4><i class="fa-solid fa-graduation-cap"></i> Formación</h4>
+                            <h4 data-i18n="about_edu_title"><i class="fa-solid fa-graduation-cap"></i> Formación</h4>
                             <ul>
-                                <li><strong>2022-Actual:</strong> Grado en diseño y programación de videojuegos (UPC)</li>
-                                <li><strong>2015-Pendiente:</strong> Grado en Psicología (UOC)</li>
-                                <li><strong>2020-2021:</strong> Programación Neurolingüística (Deusto Salud)</li>
-                                <li><strong>2019-2020:</strong> Doble FP: Auxiliar de enfermería y psiquiatría (Matrícula)</li>
+                                <li data-i18n="about_edu_1"><strong>2022-Actual:</strong> Grado en diseño y programación de videojuegos (UPC)</li>
+                                <li data-i18n="about_edu_2"><strong>2015-Pendiente:</strong> Grado en Psicología (UOC)</li>
+                                <li data-i18n="about_edu_3"><strong>2020-2021:</strong> Programación Neurolingüística (Deusto Salud)</li>
+                                <li data-i18n="about_edu_4"><strong>2019-2020:</strong> Doble FP: Auxiliar de enfermería y psiquiatría (Matrícula)</li>
                             </ul>
                         </div>
 
                         <div class="soft-skills mt-4">
-                            <h4><i class="fa-solid fa-heart"></i> Habilidades Interpersonales</h4>
+                            <h4 data-i18n="about_skills_title"><i class="fa-solid fa-heart"></i> Habilidades Interpersonales</h4>
                             <div class="tags">
-                                <span class="tag">Resolutiva</span>
-                                <span class="tag">Comunicativa</span>
-                                <span class="tag">Con Iniciativa</span>
-                                <span class="tag">Empática</span>
+                                <span class="tag" data-i18n="skill_1">Resolutiva</span>
+                                <span class="tag" data-i18n="skill_2">Comunicativa</span>
+                                <span class="tag" data-i18n="skill_3">Con Iniciativa</span>
+                                <span class="tag" data-i18n="skill_4">Empática</span>
                             </div>
                         </div>
                         
                         <div class="languages mt-4">
-                            <p><strong>Idiomas:</strong> Castellano/Catalán (Nativo), Inglés (Nivel Alto).</p>
+                            <p data-i18n="about_langs"><strong>Idiomas:</strong> Castellano/Catalán (Nativo), Inglés (Nivel Alto).</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="contact-footer glass-panel mt-5">
-                    <h3>Contacto</h3>
+                    <h3 data-i18n="contact_title">Contacto</h3>
                     <div class="contact-links">
                         <a href="mailto:andreadonaroca@gmail.com"><i class="fa-solid fa-envelope"></i> andreadonaroca@gmail.com</a>
                         <a href="tel:+34692020923"><i class="fa-solid fa-phone"></i> +34 692 020 923</a>
@@ -231,6 +237,8 @@
         </section>
     </main>
 
+    <!-- Scripts -->
+    <script src="scripts/translations.js"></script>
     <script src="scripts/main.js"></script>
 </body>
 </html>

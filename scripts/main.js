@@ -77,4 +77,41 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // --- Language Switcher Logic ---
+    const langBtns = document.querySelectorAll('.lang-btn');
+    
+    function setLanguage(lang) {
+        // Update active class on buttons
+        langBtns.forEach(btn => {
+            btn.classList.remove('active');
+            if(btn.getAttribute('data-lang') === lang) {
+                btn.classList.add('active');
+            }
+        });
+
+        // Translate all elements with data-i18n attribute
+        const elementsToTranslate = document.querySelectorAll('[data-i18n]');
+        elementsToTranslate.forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (translations[lang] && translations[lang][key]) {
+                el.innerHTML = translations[lang][key];
+            }
+        });
+
+        // Save preference in localStorage
+        localStorage.setItem('preferredLang', lang);
+    }
+
+    // Add click events to language buttons
+    langBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const selectedLang = e.target.getAttribute('data-lang');
+            setLanguage(selectedLang);
+        });
+    });
+
+    // Load preferred language or default to Spanish
+    const savedLang = localStorage.getItem('preferredLang') || 'es';
+    setLanguage(savedLang);
 });
