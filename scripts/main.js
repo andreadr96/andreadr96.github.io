@@ -114,4 +114,36 @@ document.addEventListener('DOMContentLoaded', () => {
     // Load preferred language or default to Spanish
     const savedLang = localStorage.getItem('preferredLang') || 'es';
     setLanguage(savedLang);
+
+    // --- Theme Switcher Logic ---
+    const themeBtn = document.getElementById('theme-toggle');
+    const body = document.body;
+    const themeIcon = themeBtn.querySelector('i');
+
+    function setTheme(isDark) {
+        if (isDark) {
+            body.classList.add('dark-mode');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        } else {
+            body.classList.remove('dark-mode');
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+        }
+        localStorage.setItem('darkMode', isDark);
+    }
+
+    // Check saved preference or system preference
+    const savedTheme = localStorage.getItem('darkMode');
+    if (savedTheme !== null) {
+        setTheme(savedTheme === 'true');
+    } else {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        setTheme(prefersDark);
+    }
+
+    themeBtn.addEventListener('click', () => {
+        const isCurrentlyDark = body.classList.contains('dark-mode');
+        setTheme(!isCurrentlyDark);
+    });
 });
