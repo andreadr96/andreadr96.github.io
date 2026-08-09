@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andrea Doña - Portfolio</title>
-    <meta name="description" content="Portfolio de Andrea Doña - Level Designer y Game Producer">
+    <meta name="description" content="Portfolio de Andrea Doña - Level Designer, Game Producer y Administración">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,10 +16,7 @@
 
     <!-- Minimalist Sakura Logo -->
     <div class="logo-container" id="go-home">
-        <svg class="sakura-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <path d="M50 15 C 65 -5, 95 15, 80 40 C 95 65, 75 95, 50 80 C 25 95, 5 65, 20 40 C 5 15, 35 -5, 50 15 Z" fill="var(--primary-color)" opacity="0.8"/>
-            <circle cx="50" cy="45" r="8" fill="#fff" opacity="0.9"/>
-        </svg>
+        <img src="assets/iconos/flor-de-sakura.png" alt="Sakura Logo" class="sakura-logo">
         <span class="logo-text">Andrea Doña</span>
     </div>
 
@@ -39,8 +36,9 @@
     <nav id="main-nav" class="hidden">
         <ul>
             <li><a href="#" data-target="home-section" class="nav-link active" data-i18n="nav_home">Inicio</a></li>
-            <li><a href="#" data-target="level-design-section" class="nav-link" data-i18n="nav_level">Level Design</a></li>
-            <li><a href="#" data-target="project-management-section" class="nav-link" data-i18n="nav_pm">Project Management</a></li>
+            <li><a href="#" data-target="level-design-section" class="nav-link" data-i18n="nav_ld">Level Design</a></li>
+            <li><a href="#" data-target="project-management-section" class="nav-link" data-i18n="nav_pm">Producción</a></li>
+            <li><a href="#" data-target="admin-section" class="nav-link" data-i18n="nav_admin">Administración</a></li>
             <li><a href="#" data-target="about-section" class="nav-link" data-i18n="nav_about">Sobre Mí</a></li>
         </ul>
     </nav>
@@ -51,9 +49,9 @@
             <div class="hero">
                 <div class="hero-content">
                     <h1 data-i18n="home_title">Hola, soy <span class="highlight">Andrea Doña</span></h1>
-                    <p class="subtitle" data-i18n="home_subtitle">Competitor Analyst | Game Producer | Psychology</p>
+                    <p class="subtitle" data-i18n="home_subtitle">Level Designer | Game Producer | Administration | Psychology</p>
                     <p class="intro-text" data-i18n="home_intro">
-                        Bienvenido a mi espacio. Mi perfil se bifurca entre la creatividad de la creación de mundos y la organización estratégica para hacerlos realidad, todo apoyado por una profunda comprensión de la psicología humana.
+                        Bienvenida/o a mi espacio. Mi perfil profesional es muy versátil: combino la creatividad del diseño de niveles, la estrategia y liderazgo de la producción de videojuegos, y el rigor de la gestión administrativa; todo apoyado por una sólida base en psicología.
                     </p>
                     <div class="path-selector">
                         <h2 data-i18n="home_select">¿Qué perfil deseas explorar?</h2>
@@ -62,16 +60,24 @@
                                 <div class="card-icon">
                                     <i class="fa-solid fa-cube"></i>
                                 </div>
-                                <h3 data-i18n="card_level_title">Level Design & Arte</h3>
-                                <p data-i18n="card_level_desc">Creación de mundos, modelado 3D y diseño de entornos inmersivos.</p>
+                                <h3 data-i18n="card_ld_title">Level Design</h3>
+                                <p data-i18n="card_ld_desc">Diseño de niveles, curvas de progresión, análisis de competidores (FTUE) y economía.</p>
                                 <span class="btn-explore" data-i18n="btn_explore">Explorar <i class="fa-solid fa-arrow-right"></i></span>
                             </div>
                             <div class="path-card" data-target="project-management-section">
                                 <div class="card-icon">
                                     <i class="fa-solid fa-users-gear"></i>
                                 </div>
-                                <h3 data-i18n="card_pm_title">Project Management</h3>
-                                <p data-i18n="card_pm_desc">Gestión de equipos, metodologías Agile y producción de videojuegos.</p>
+                                <h3 data-i18n="card_pm_title">Game Producer</h3>
+                                <p data-i18n="card_pm_desc">Liderazgo de equipos, metodologías Agile (Scrum), mitigación de riesgos y producción.</p>
+                                <span class="btn-explore" data-i18n="btn_explore">Explorar <i class="fa-solid fa-arrow-right"></i></span>
+                            </div>
+                            <div class="path-card" data-target="admin-section">
+                                <div class="card-icon">
+                                    <i class="fa-solid fa-folder-open"></i>
+                                </div>
+                                <h3 data-i18n="card_admin_title">Administración</h3>
+                                <p data-i18n="card_admin_desc">Gestión documental, atención al cliente, logística y coordinación de proyectos.</p>
                                 <span class="btn-explore" data-i18n="btn_explore">Explorar <i class="fa-solid fa-arrow-right"></i></span>
                             </div>
                         </div>
@@ -84,52 +90,50 @@
         <section id="level-design-section" class="page-section hidden">
             <div class="section-container">
                 <div class="section-header">
-                    <h2 data-i18n="level_section_title">Level Design & <span class="highlight">Arte</span></h2>
-                    <p data-i18n="level_section_subtitle">Dando vida a los mundos imaginarios.</p>
+                    <h2 data-i18n="ld_section_title">Level Design & <span class="highlight">Análisis</span></h2>
+                    <p data-i18n="ld_section_subtitle">Dando vida a mundos jugables y reteniendo jugadores.</p>
                 </div>
                 
-                <div class="skills-grid">
-                    <div class="skill-category glass-panel">
-                        <h3 data-i18n="level_art_title"><i class="fa-solid fa-pen-nib"></i> Software de Arte y Producción</h3>
-                        <div class="tags">
-                            <span class="tag">Adobe Photoshop</span>
-                            <span class="tag">Adobe Illustrator</span>
-                            <span class="tag">Substance Painter</span>
-                            <span class="tag">3DS Max</span>
-                            <span class="tag">Maya</span>
-                            <span class="tag">Zbrush</span>
-                        </div>
-                        <p class="mt-4" data-i18n="level_art_desc">Actualmente cursando el 4º año del Grado en diseño y programación de videojuegos en la UPC, desarrollando mis habilidades en la creación de assets y diseño de niveles.</p>
+                <div class="timeline">
+                    <!-- SuperBanana -->
+                    <div class="timeline-item glass-panel">
+                        <h3 data-i18n="ld_exp_title"><i class="fa-solid fa-briefcase"></i> Experiencia Principal</h3>
+                        <p data-i18n="ld_sb_role"><strong>Level Designer & Competitor Analyst</strong> (Jul 2025 – Actualidad)</p>
+                        <p data-i18n="ld_sb_co" class="mb-2">SuperBanana Studios (Mobile Games)</p>
+                        <ul class="styled-list">
+                            <li data-i18n="ld_sb_1">Diseño del ciclo completo de niveles, desde conceptualización y greyboxing hasta implementación final.</li>
+                            <li data-i18n="ld_sb_2">Diseño y ajuste de curvas de dificultad y progresión para optimizar el onboarding y retención a largo plazo.</li>
+                            <li data-i18n="ld_sb_3">Análisis profundo de competidores, FTUE, economía in-game y eventos en vivo (LiveOps).</li>
+                        </ul>
                     </div>
                     
-                    <div class="skill-category glass-panel">
-                        <h3 data-i18n="level_comp_title"><i class="fa-solid fa-gamepad"></i> Análisis de Competidores</h3>
-                        <p data-i18n="level_comp_sb"><strong>SuperBanana Studios</strong> (Jul 2025 - Actual)</p>
-                        <ul class="styled-list">
-                            <li data-i18n="level_comp_1">Estudios detallados sobre la jugabilidad, progresión y mecánicas.</li>
-                            <li data-i18n="level_comp_2">Análisis de economía interna, retención y monetización.</li>
-                            <li data-i18n="level_comp_3">Examen de LiveEvents y sistemas de progresión (LiveOps).</li>
-                        </ul>
+                    <!-- Media Placeholder for Gameplay GIF -->
+                    <div class="media-container">
+                        <!-- Aquí puedes poner un GIF. Ejemplo: <img src="assets/gifs/gameplay1.gif" alt="Gameplay"> -->
+                        <div class="media-placeholder">
+                            <i class="fa-solid fa-film"></i>
+                            <span data-i18n="media_gif_placeholder">GIF de Gameplay / Prototipo</span>
+                        </div>
+                    </div>
+
+                    <!-- Indie Projects -->
+                    <div class="timeline-item glass-panel">
+                        <h3 data-i18n="ld_indie_title">Proyectos de Desarrollo</h3>
+                        <div class="mt-4">
+                            <p><strong><span data-i18n="ld_nemea_role">Game / Level Designer</span></strong> | <span data-i18n="ld_nemea_co">Nemea Digital Studio (Oct 2025 - Actualidad)</span></p>
+                            <p data-i18n="ld_nemea_desc">Diseño de experiencia RPG (Echoes of Ithaca), balanceo de combate por turnos y diseño de niveles para fomentar narrativa y exploración.</p>
+                        </div>
+                        <div class="mt-4">
+                            <p><strong><span data-i18n="ld_crucible_role">Level / Game Designer</span></strong> | <span data-i18n="ld_crucible_co">Proyecto Crucible - UPC (Ene 2025 - Jun 2025)</span></p>
+                            <p data-i18n="ld_crucible_desc">Estructuración de mapas, greyboxing y pipeline de integración de assets en motor gráfico propio.</p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="portfolio-gallery">
-                    <h3 data-i18n="level_projects_title">Proyectos Destacados</h3>
-                    <div class="gallery-grid">
-                        <div class="gallery-item">
-                            <img src="https://images.unsplash.com/photo-1614294149010-950b698f72c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Proyecto Level Design 1">
-                            <div class="item-overlay">
-                                <h4 data-i18n="level_proj_1_title">Entorno Sci-Fi</h4>
-                                <p data-i18n="level_proj_1_desc">Modelado y texturizado</p>
-                            </div>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Proyecto Level Design 2">
-                            <div class="item-overlay">
-                                <h4 data-i18n="level_proj_2_title">Assets Fantasy</h4>
-                                <p data-i18n="level_proj_2_desc">Zbrush & Substance</p>
-                            </div>
-                        </div>
+                <div class="management-skills mt-5">
+                    <div class="glass-panel text-center">
+                        <h3 data-i18n="ld_skills_title"><i class="fa-solid fa-pen-nib"></i> Habilidades & Software</h3>
+                        <p data-i18n="ld_skills_desc" class="mt-4">Level Design Pipeline, Curvas de Progresión, Balanceo, FTUE, LiveOps. Software: Maya, 3DS Max, Substance Painter, ZBrush.</p>
                     </div>
                 </div>
             </div>
@@ -139,51 +143,83 @@
         <section id="project-management-section" class="page-section hidden">
             <div class="section-container">
                 <div class="section-header">
-                    <h2 data-i18n="pm_section_title">Project <span class="highlight">Management</span></h2>
-                    <p data-i18n="pm_section_subtitle">Liderazgo, Agile y producción de videojuegos.</p>
+                    <h2 data-i18n="pm_section_title">Game <span class="highlight">Producer</span></h2>
+                    <p data-i18n="pm_section_subtitle">Dirigiendo talento, optimizando flujos y asegurando entregas.</p>
                 </div>
 
                 <div class="timeline">
+                    <!-- Nemea -->
                     <div class="timeline-item glass-panel">
-                        <div class="timeline-date" data-i18n="pm_tesis_date">Actual - Jun '26</div>
-                        <div class="timeline-content">
-                            <h3 data-i18n="pm_tesis_title">Game Producer (Tesis Universitaria)</h3>
-                            <p data-i18n="pm_tesis_subtitle"><strong>RPG por turnos (Basado en la Odisea)</strong></p>
-                            <p data-i18n="pm_tesis_desc">Productora de un equipo de 8 personas (5 colaboradores). Gestión completa del ciclo de desarrollo para la tesis universitaria.</p>
+                        <p><strong><span data-i18n="pm_nemea_role">Game Producer & Project Manager</span></strong></p>
+                        <p data-i18n="pm_nemea_co">Nemea Digital Studio (Oct 2025 - Actualidad)</p>
+                        <p class="mt-4" data-i18n="pm_nemea_desc">Liderazgo de un estudio indie de 10 profesionales para el desarrollo de un RPG por turnos. Gestión de roadmap, sprints y milestones. Resolución de conflictos usando dinámicas de psicología.</p>
+                    </div>
+
+                    <!-- Media Placeholder for Trello/Jira -->
+                    <div class="media-container">
+                        <!-- Aquí puedes poner una imagen de tus boards de Trello/Jira. -->
+                        <div class="media-placeholder">
+                            <i class="fa-solid fa-image"></i>
+                            <span data-i18n="media_img_placeholder">Imagen del Proyecto / Tablero</span>
                         </div>
                     </div>
 
+                    <!-- Crucible -->
                     <div class="timeline-item glass-panel">
-                        <div class="timeline-date" data-i18n="pm_wh_date">Ene '25 - Jun '25</div>
-                        <div class="timeline-content">
-                            <h3 data-i18n="pm_wh_title">Game Producer</h3>
-                            <p data-i18n="pm_wh_subtitle"><strong>Motor propio (Basado en Warhammer 40k)</strong></p>
-                            <p data-i18n="pm_wh_desc">Productora para una clase de 23 alumnos. Implementación de Metodología Agile y Scrum Teams en un motor desarrollado internamente.</p>
-                        </div>
+                        <p><strong><span data-i18n="pm_crucible_role">Game Producer</span></strong></p>
+                        <p data-i18n="pm_crucible_co">Proyecto Crucible - UPC (Ene 2025 - Jun 2025)</p>
+                        <p class="mt-4" data-i18n="pm_crucible_desc">Producción ejecutiva de un equipo de 23 alumnos. Implementación estricta de Agile/Scrum. Control de dependencias técnicas y scope management.</p>
                     </div>
                     
+                    <!-- HappyPathLab -->
                     <div class="timeline-item glass-panel">
-                        <div class="timeline-date" data-i18n="pm_mentor_date">Oct '25</div>
-                        <div class="timeline-content">
-                            <h3 data-i18n="pm_mentor_title">Clases de Mentoría y Coaching</h3>
-                            <p data-i18n="pm_mentor_subtitle"><strong>HappyPathLab</strong></p>
-                            <p data-i18n="pm_mentor_desc">Colaboración para aplicar aprendizaje de mentoría/coaching a personas del sector de videojuegos.</p>
-                        </div>
+                        <p><strong><span data-i18n="pm_mentor_role">Mentoría & Coaching en Videojuegos</span></strong></p>
+                        <p data-i18n="pm_mentor_co">HappyPathLab (Oct 2025 - Actualidad)</p>
+                        <p class="mt-4" data-i18n="pm_mentor_desc">Aplicación de técnicas de coaching y PNL orientadas al desarrollo profesional y soporte de integrantes del sector.</p>
                     </div>
                 </div>
 
                 <div class="management-skills mt-5">
-                    <div class="glass-panel">
-                        <h3 data-i18n="pm_tools_title"><i class="fa-solid fa-toolbox"></i> Herramientas de Gestión</h3>
-                        <div class="tags">
-                            <span class="tag">Metodología Agile</span>
-                            <span class="tag">Scrum</span>
-                            <span class="tag">Trello</span>
-                            <span class="tag">Pack Atlassian</span>
-                            <span class="tag">Notion</span>
-                            <span class="tag">Drive / Excel</span>
-                            <span class="tag">Slack / Discord</span>
-                        </div>
+                    <div class="glass-panel text-center">
+                        <h3 data-i18n="pm_skills_title"><i class="fa-solid fa-toolbox"></i> Gestión & Liderazgo</h3>
+                        <p data-i18n="pm_skills_desc" class="mt-4">Agile, Scrum, Scope Management, Game Psychology, Jira, Confluence, Trello, Notion.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ADMIN SECTION -->
+        <section id="admin-section" class="page-section hidden">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 data-i18n="admin_section_title">Gestión & <span class="highlight">Administración</span></h2>
+                    <p data-i18n="admin_section_subtitle">Organización rigurosa, atención al público y flujos de trabajo.</p>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item glass-panel">
+                        <p><strong><span data-i18n="admin_aero_role">Auxiliar Administrativa</span></strong></p>
+                        <p data-i18n="admin_aero_co">Escola Aeronàutica de Catalunya (Oct 2023 - Sept 2025)</p>
+                        <p class="mt-4" data-i18n="admin_aero_desc">Tramitación de expedientes, atención presencial a clientes/alumnado y mantenimiento de la web corporativa y material didáctico.</p>
+                    </div>
+
+                    <div class="timeline-item glass-panel">
+                        <p><strong><span data-i18n="admin_fnac_role">Supervisora de Postventa y Logística</span></strong></p>
+                        <p data-i18n="admin_fnac_co">FNAC Glòries (Jul 2021 - Sept 2023)</p>
+                        <p class="mt-4" data-i18n="admin_fnac_desc">Atención, fidelización y seguimiento activo de clientes. Supervisión de tienda, resolución de incidencias y gestión logística.</p>
+                    </div>
+                    
+                    <div class="timeline-item glass-panel">
+                        <p><strong><span data-i18n="admin_flores_role">Recepcionista y Administrativa</span></strong></p>
+                        <p data-i18n="admin_flores_co">Inst. Anna Flores (Jun 2022 - Sept 2022)</p>
+                        <p class="mt-4" data-i18n="admin_flores_desc">Gestión de calendario, emisión de titulaciones oficiales y supervisión del estado de las instalaciones.</p>
+                    </div>
+                </div>
+
+                <div class="management-skills mt-5">
+                    <div class="glass-panel text-center">
+                        <h3 data-i18n="admin_skills_title"><i class="fa-solid fa-folder-open"></i> Competencias Administrativas</h3>
+                        <p data-i18n="admin_skills_desc" class="mt-4">Atención al cliente, gestión documental, resolución de reclamaciones, Excel avanzado, redacción de informes.</p>
                     </div>
                 </div>
             </div>
@@ -200,31 +236,31 @@
                     </div>
                     <div class="about-content">
                         <h2 data-i18n="about_section_title">Sobre <span class="highlight">Mí</span></h2>
-                        <p class="lead" data-i18n="about_lead">Psicología aplicada al diseño y desarrollo.</p>
-                        <p data-i18n="about_desc">Además de mi pasión por los videojuegos, mi formación en Psicología aporta una capa extra a todo lo que hago. Entender al jugador (como Level Designer) y entender al equipo (como Game Producer) son dos caras de la misma moneda.</p>
+                        <p class="lead" data-i18n="about_lead">Psicología aplicada a múltiples disciplinas.</p>
+                        <p data-i18n="about_desc">Aporto una perspectiva única que cruza la psicología con el mundo corporativo y creativo. Entender al jugador (como Level Designer), cohesionar a un equipo (como Game Producer) y resolver conflictos con empatía (en Administración) son tres caras del mismo poliedro.</p>
                         
                         <div class="education-list mt-4">
-                            <h4 data-i18n="about_edu_title"><i class="fa-solid fa-graduation-cap"></i> Formación</h4>
+                            <h4 data-i18n="about_edu_title"><i class="fa-solid fa-graduation-cap"></i> Educación</h4>
                             <ul>
-                                <li data-i18n="about_edu_1"><strong>2022-Actual:</strong> Grado en diseño y programación de videojuegos (UPC)</li>
-                                <li data-i18n="about_edu_2"><strong>2015-Pendiente:</strong> Grado en Psicología (UOC)</li>
-                                <li data-i18n="about_edu_3"><strong>2020-2021:</strong> Programación Neurolingüística (Deusto Salud)</li>
-                                <li data-i18n="about_edu_4"><strong>2019-2020:</strong> Doble FP: Auxiliar de enfermería y psiquiatría (Matrícula)</li>
+                                <li data-i18n="about_edu_1"><strong>2022-Jun 2026:</strong> Grado en Diseño y Tecnología Digital / Videojuegos (UPC)</li>
+                                <li data-i18n="about_edu_2"><strong>2015-Actualidad:</strong> Grado en Psicología (UOC - 3er año)</li>
+                                <li data-i18n="about_edu_3"><strong>2020-2021:</strong> Especialización en PNL (Deusto Salud)</li>
+                                <li data-i18n="about_edu_4"><strong>2019-2020:</strong> Doble FP: Aux. de Enfermería y Psiquiatría (Matrícula de Honor)</li>
                             </ul>
                         </div>
 
                         <div class="soft-skills mt-4">
-                            <h4 data-i18n="about_skills_title"><i class="fa-solid fa-heart"></i> Habilidades Interpersonales</h4>
+                            <h4 data-i18n="about_skills_title"><i class="fa-solid fa-heart"></i> Soft Skills</h4>
                             <div class="tags">
-                                <span class="tag" data-i18n="skill_1">Resolutiva</span>
-                                <span class="tag" data-i18n="skill_2">Comunicativa</span>
-                                <span class="tag" data-i18n="skill_3">Con Iniciativa</span>
-                                <span class="tag" data-i18n="skill_4">Empática</span>
+                                <span class="tag" data-i18n="skill_1">Empatía</span>
+                                <span class="tag" data-i18n="skill_2">Liderazgo Adaptativo</span>
+                                <span class="tag" data-i18n="skill_3">Resolución de Problemas</span>
+                                <span class="tag" data-i18n="skill_4">Organización Rigurosa</span>
                             </div>
                         </div>
                         
                         <div class="languages mt-4">
-                            <p data-i18n="about_langs"><strong>Idiomas:</strong> Castellano/Catalán (Nativo), Inglés (Nivel Alto).</p>
+                            <p data-i18n="about_langs"><strong>Idiomas:</strong> Castellano (Nativo), Catalán (Nativo), Inglés (Nivel Alto - B2/C1).</p>
                         </div>
                     </div>
                 </div>
